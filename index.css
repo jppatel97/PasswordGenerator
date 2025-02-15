@@ -1,0 +1,229 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.password-container {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.password-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.password-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.password-display {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    width: 80%;
+    outline: none;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#copymsg{
+    color: #00ffcc;
+}
+.copy-btn:hover {
+    transform: scale(1.1);
+}
+
+.copy-message {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #00ffcc;
+    color: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copy-message.active {
+    opacity: 1;
+}
+
+.length-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.password-length-display {
+    font-size: 1.2rem;
+    color: #00ffcc;
+}
+
+.password-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #333;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.password-slider:hover {
+    opacity: 1;
+}
+
+.password-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00ffcc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.password-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00ffcc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.password-options {
+    margin-bottom: 1.5rem;
+}
+
+.password-options div {
+    margin-bottom: 0.5rem;
+}
+
+.password-options input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: #00ffcc;
+}
+
+.password-options label {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.password-strength {
+    height: 10px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.password-strength::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #00ffcc;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.generate-password-btn {
+    background-color: #00ffcc;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.generate-password-btn:hover {
+    background-color: #00e6b8;
+    transform: scale(1.05);
+}
+
+.generate-password-btn:active {
+    transform: scale(0.95);
+}
+
+
+[data-indicator] {
+    height: 10px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+[data-indicator]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #00ffcc;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+[data-indicator][style*="#0f0"]::before {
+    background-color: #0f0;
+    width: 100%;
+}
+
+[data-indicator][style*="#ff0"]::before {
+    background-color: #ff0;
+    width: 66%;
+}
+
+[data-indicator][style*="#f00"]::before {
+    background-color: #f00;
+    width: 33%;
+}
