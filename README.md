@@ -9,16 +9,16 @@ A simple Password Generator built using HTML, CSS, and JavaScript. This project 
 ✅ Responsive and user-friendly UI
 
 🖥️ Technologies Used
-HTML
-CSS
+HTML,
+CSS,
 JavaScript
 
 🎯 How to Use
-Open the app in your browser
-Choose the desired password length
-Select character types (uppercase, lowercase, numbers, symbols)
-Click Generate Password
-Copy the password with one click
+Open the app in your browser,
+Choose the desired password length,
+Select character types (uppercase, lowercase, numbers, symbols),
+Click Generate Password,
+Copy the password with one click.
 
 📂 Project Structure
 /password-generator  
